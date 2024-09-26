@@ -1,5 +1,5 @@
 from django.db import models
-from category import Category
+from .category import Category
 import uuid
 class Product(models.Model):
     category = models.ForeignKey(
