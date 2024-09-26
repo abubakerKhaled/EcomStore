@@ -1,5 +1,5 @@
 
 
 # shop/models.py
-from .models.product import Product  # Relative import
-from .models.category import Category  # Relative import
+from .models.product_model import Product  # Relative import
+from .models.category_model import Category  # Relative import
