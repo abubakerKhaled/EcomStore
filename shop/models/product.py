@@ -28,6 +28,7 @@ class Product(models.Model):
         ordering = ['name']
         indexes = [
             models.Index(fields=['id', 'slug']),
+            models.Index(fields=['uuid', 'slug']),
             models.Index(fields=['name']),
             models.Index(fields=['-created']),
         ]
