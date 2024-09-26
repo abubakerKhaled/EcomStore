@@ -1,3 +1,3 @@
 from django.shortcuts import render
 
-from .views.product import product_detail, product_list
+from .views.product_views import product_detail, product_list
