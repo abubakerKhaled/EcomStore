@@ -13,7 +13,7 @@ urlpatterns = [
     ),
     path(
         '<uuid:uuid>/<slug:slug>/',
-        views.product_details,
-        name='product_details'
+        views.product_detail,
+        name='product_detail'
     ),
 ]
