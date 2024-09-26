@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8" />
         <title>{% block title %}My shop{% endblock %}</title>
-        <link href="{% static "css/base.css" %}" rel="stylesheet">
+        <link href="{% static 'css/base.css' %}" rel="stylesheet">
     </head>
     <body>
         <div id="header">
@@ -13,6 +13,9 @@
         <div id="subheader">
             <div class="cart">Your cart is empty.</div>
         </div>
-        <div id="content">{% block content %} {% endblock %}</div>
+        <div id="content">
+            {% block content %}
+            {% endblock %}
+        </div>
     </body>
 </html>
