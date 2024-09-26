@@ -1,12 +1,17 @@
 from django.db import models
 from category import Category
-
+import uuid
 class Product(models.Model):
     category = models.ForeignKey(
         Category,
         related_name = 'products',
         on_delete= models.CASCADE
     )
+    uuid = models.UUIDField(
+        default=uuid.uuid4,
+        editable=False, 
+        unique=True
+    )  # UUID as secondary identifier
     name = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200)
     image = models.ImageField(
