@@ -18,3 +18,29 @@ class Cart:
             cart = self.session[settings.CART_SESSION_ID] = {}
         ## Store the new cart into the cart variable
         self.cart = cart
+
+    def add(self, product, quantity=1, override_quantity=False):
+        """
+        Add a product to the cart or update its quantity.
+        """
+        ## Get the product id 
+        ## JSON uses string keys only
+        product_id = str(product.id)
+        ## If the product id not in the cart
+        if product_id not in self.cart:
+            ## Initialize the new cart item
+            self.cart[product_id] = {
+                'quantity': 0,
+                'price': str(product.price)
+            }
+        ## If we want to override the quantity
+        if override_quantity:
+            self.cart[product_id]['quantity'] = quantity
+        ## Else we add quantity to the old quantity
+        else:
+            self.cart[product_id]['quantity'] += quantity
+        self.save()
+
+    def save(self):
+        # make the session as 'modified' to make sure it gets saved
+        self.session.modified = True
