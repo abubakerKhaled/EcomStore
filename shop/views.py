@@ -1,1 +1,0 @@
-from .views.product_views import product_detail, product_list
