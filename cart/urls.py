@@ -10,7 +10,7 @@ urlpatterns = [
         views.cart_add,
         name='cart_add'),
     path(
-        'remove/uuid:product_id>',
+        'remove/<uuid:product_id>',
         views.cart_remove,
         name='cart_remove')
 ]
