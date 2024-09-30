@@ -134,6 +134,8 @@ MEDIA_ROOT = BASE_DIR / 'media'
 ## CART SESSION
 CART_SESSION_ID = 'cart'
 
+## Sending the email to console
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 ## CELERY Settings
 CELERY_TASK_ALWAYS_EAGER = True
