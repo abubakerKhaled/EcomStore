@@ -21,7 +21,7 @@ def order_create(request):
             cart.clear()
             print(f'Order created, calling task with UUID: {order.uuid}')
             # Launch asynchronous task
-            order_created.delay(str(order.uuid))
+            order_created.delay(order.id)
 
             context = {
                 'order': order
