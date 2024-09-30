@@ -2,7 +2,7 @@ from django.shortcuts import render
 from cart.cart import Cart
 from .forms import OrderCreateForm
 from .models import OrderItem
-
+from .tasks import order_created
 
 def order_create(request):
     cart = Cart(request)
@@ -19,6 +19,10 @@ def order_create(request):
                 )
             # clear the cart
             cart.clear()
+            print(f'Order created, calling task with UUID: {order.uuid}')
+            # Launch asynchronous task
+            order_created.delay(str(order.uuid))
+
             context = {
                 'order': order
             }
