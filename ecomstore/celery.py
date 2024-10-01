@@ -1,9 +1,7 @@
-from decouple import config
+import os
 from celery import Celery
 
-
-# set the default Django settings module for the celery's program
-config('DJANGO_SETTINGS_MODULE', default='ecomstore.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ecomstore.settings')
 
 app = Celery('ecomstore')
 app.config_from_object('django.conf:settings', namespace='CELERY')

@@ -138,8 +138,7 @@ CART_SESSION_ID = 'cart'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 ## CELERY Settings
-CELERY_TASK_ALWAYS_EAGER = True
-
+CELERY_BROKER_URL = 'amqp://guest:guest@localhost:5672//'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
