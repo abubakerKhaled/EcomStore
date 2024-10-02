@@ -140,6 +140,12 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 ## CELERY Settings
 CELERY_BROKER_URL = 'amqp://guest:guest@localhost:5672//'
 
+
+## STRIPE keys
+STRIPE_PUBSISHABLE_KEY = config('STRIPE_PUBSISHABLE_KEY', default=None)
+STRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY', default=None)
+STRIPE_API_VERSION = '2024-06-20'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
