@@ -2,12 +2,20 @@ from django.contrib import admin
 from .models.order_model import Order
 from .models.order_item_model import OrderItem
 from .forms import OrderItemForm
+from django.utils.safestring import mark_safe
 
 class OrderItemInline(admin.TabularInline):
     model = OrderItem  # This ensures it references the correct model
     form = OrderItemForm  # Use the custom form for the inline
     raw_id_fields = ['product']
 
+def order_payment(obj):
+    url = obj.get_stripe_url()
+    if obj.stripe_id:
+        html = f'<a href="{url}" target="_blank">{obj.stripe_id}</a>'
+        return mark_safe(html)
+    return ''
+order_payment.short_description='Stripe payment'
 
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
@@ -20,6 +28,7 @@ class OrderAdmin(admin.ModelAdmin):
         'postal_code',
         'city',
         'paid',
+        order_payment,
         'created',
         'updated',
     ]
