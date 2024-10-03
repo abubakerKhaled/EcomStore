@@ -16,6 +16,7 @@ class Order(models.Model):
         unique=True,
         editable=False
     )
+    stripe_id = models.CharField(max_length=250, blank=True)
 
     class Meta:
         ordering = ['-created']
