@@ -146,6 +146,7 @@ CELERY_BROKER_URL = 'amqp://guest:guest@localhost:5672//'
 STRIPE_PUBSISHABLE_KEY = config('STRIPE_PUBSISHABLE_KEY', default=None)
 STRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY', default=None)
 STRIPE_API_VERSION = '2024-06-20'
+STRIPE_WEBHOOK_SECRET = config('STRIPE_WEBHOOK_SECRET', default=None)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
