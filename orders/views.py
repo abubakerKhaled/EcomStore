@@ -1,7 +1,8 @@
-from django.shortcuts import render, redirect
+from django.contrib.admin.views.decorators import staff_member_required
+from django.shortcuts import get_object_or_404, render, redirect
 from cart.cart import Cart
 from .forms import OrderCreateForm
-from .models import OrderItem
+from .models import OrderItem, Order
 from .tasks import order_created
 
 def order_create(request):
@@ -25,7 +26,6 @@ def order_create(request):
             # set the order in the session
             request.session['order_id'] = order.id
             # redirect for payment
-            #TODO: implement the payment:process
             return redirect('payment:process')
         
     else:
@@ -39,3 +39,13 @@ def order_create(request):
             'orders/order/create.html',
             context 
         )
+    
+@staff_member_required
+def admin_order_detail(request, order_id):
+    order = get_object_or_404(Order, id=order_id)
+    context = {
+        'order': order
+    }
+    return render(
+        request, 'admin/orders/order/detail.html', context
+    )
