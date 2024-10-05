@@ -27,7 +27,7 @@ order_payment.short_description='Stripe payment'
 
 def order_detail(obj):
     url = reverse('orders:admin_order_detail', args=[obj.id])
-    return mark_safe(f"<a href='{url}'>View</a>")
+    return mark_safe(f"<a href='{url}' target='_blank'>View</a>")
 
 
 def export_to_csv(model_admin, request, queryset):
@@ -62,7 +62,7 @@ export_to_csv.short_description = 'Export to CSV'
 
 def order_pdf(obj):
     url = reverse('orders:admin_order_pdf', args=[obj.id])
-    return mark_safe(f'<a href="{url}">PDF</a>')
+    return mark_safe(f'<a href="{url}" target="_blank">PDF</a>')
 order_pdf.short_description = 'Invoice'
 
 @admin.register(Order)

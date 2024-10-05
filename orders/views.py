@@ -5,9 +5,10 @@ from .forms import OrderCreateForm
 from .models import OrderItem, Order
 from .tasks import order_created
 import weasyprint
-from django.contrib.staticfiles import finders
 from django.http import HttpResponse
 from django.template.loader import render_to_string
+from django.templatetags.static import static
+from django.conf import settings
 
 
 
@@ -58,7 +59,8 @@ def admin_order_pdf(request, order_id):
     response['Content-Disposition'] = f'filename=order_{order_id}.pdf'
     weasyprint.HTML(string=html).write_pdf(
         response,
-        stylesheet=[weasyprint.CSS(finders.find('css/pdf.css'))],
+        stylesheets=[weasyprint.CSS(settings.BASE_DIR / 'static/css/pdf.css')]
+
     )
     return response
 
