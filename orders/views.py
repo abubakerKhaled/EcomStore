@@ -60,6 +60,7 @@ def admin_order_pdf(request, order_id):
         response,
         stylesheet=[weasyprint.CSS(finders.find('css/pdf.css'))],
     )
+    return response
 
 
 
