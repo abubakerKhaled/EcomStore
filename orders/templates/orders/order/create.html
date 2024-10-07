@@ -23,7 +23,7 @@
                 </li>
             {% endif %}
         </ul>
-        <p>Total: ${{ cart.get_total_price_after_discount:floatformat:2 }}</p>
+        <p>Total: ${{ cart.get_total_price_after_discount|floatformat:2 }}</p>
     </div>
     
     <form method="post" class="order-form">
