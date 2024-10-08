@@ -62,7 +62,7 @@ class Order(models.Model):
         return f'https://dashboard.stripe.com{path}payments/{self.stripe_id}'
     
     def get_total_cost_before_discount(self):
-        return sum(item.get_cost() for item in self.items.all)
+        return sum(item.get_cost() for item in self.items.all())
     
     def get_discount(self):
         total_cost = self.get_total_cost_before_discount()

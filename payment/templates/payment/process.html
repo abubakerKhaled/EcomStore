@@ -1,13 +1,9 @@
 {% extends 'shop/base.html' %}
 {% load static %}
 
-
-
 {% block title %}
     Pay your order
 {% endblock title %}
-
-
 
 {% block content %}
     <h1>Order summary</h1>
@@ -23,10 +19,9 @@
         </thead>
         <tbody>
             {% for item in order.items.all %}
-                <tr class='row{% cycle "1" "2" %}'>
+                <tr class="row {% cycle '1' '2' %}">
                     <td>
-                        <img src="{% if item.product.image %} {{ item.product.image.url }}
-                        {% else %}{% static 'img/no_image.png' %}{% endif %}">
+                        <img src="{% if item.product.image %}{{ item.product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}">
                     </td>
                     <td>{{ item.product.name }}</td>
                     <td class='num'>${{ item.price }}</td>
@@ -34,25 +29,25 @@
                     <td class='num'>{{ item.get_cost }}</td>
                 </tr>
             {% endfor %}
-                {% if order.coupon %}
-                    <tr class="subtotal">
-                        <td>Subtotal</td>
-                        <td colspan="3"></td>
-                        <td class="num">
-                            ${{ order.get_total_cost_before_discount|floatformat:2 }}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            "{{ order.coupon.code }}" coupon
-                            ({{ order.discount }}% off)
-                        </td>
-                        <td colspan="3"></td>
-                        <td class="num neg">
-                            -${{ order.get_discount|floatformat:2 }}
-                        </td>
-                    </tr>
-                {% endif %}
+            {% if order.coupon %}
+                <tr class="subtotal">
+                    <td>Subtotal</td>
+                    <td colspan="3"></td>
+                    <td class="num">
+                        ${{ order.get_total_cost_before_discount|floatformat:2 }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        "{{ order.coupon.code }}" coupon
+                        ({{ order.discount }}% off)
+                    </td>
+                    <td colspan="3"></td>
+                    <td class="num neg">
+                        -${{ order.get_discount|floatformat:2 }}
+                    </td>
+                </tr>
+            {% endif %}
             <tr class='total'>
                 <td colspan='3'>Total</td>
                 <td class='num'>${{ order.get_total_cost|floatformat:2 }}</td>
@@ -63,5 +58,4 @@
         {% csrf_token %}
         <input type='submit' value='Pay now'>
     </form>
-
 {% endblock content %}
