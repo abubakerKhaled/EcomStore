@@ -129,14 +129,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'static'
 
-
-
-
-
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
-
-
 
 ## CART SESSION
 CART_SESSION_ID = 'cart'
@@ -153,6 +147,11 @@ CELERY_BROKER_TRANSPORT_OPTIONS = {
 }
 CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True
 
+
+## REDIS SETTINGS
+REDIS_HOST = config('REDIS_HOST', default='localhost')
+REDIS_PORT = config('REDIS_PORT', default=6379, cast=int)
+REDIS_DB = config('REDIS_DB', default=1, cast=int)
 
 
 ## STRIPE keys
