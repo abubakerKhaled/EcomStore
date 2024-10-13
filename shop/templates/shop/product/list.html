@@ -1,20 +1,20 @@
 {% extends "shop/base.html" %}
-{% load static %}
+{% load il8n static %}
 
 {% block title %}
     {% if category %}
         {{ category.name }}
     {% else %}
-        Products
+        {% translate "Products" %}
     {% endif %}
 {% endblock %}
 
 {% block content %}
     <div id="sidebar">
-        <h3>Categories</h3>
+        <h3>{% translate "Categories" %}</h3>
         <ul>
             <li {% if not category %}class="selected"{% endif %}>
-                <a href="{% url 'shop:product_list' %}">All</a>
+                <a href="{% url 'shop:product_list' %}">{% translate "All" %}</a>
             </li>
             {% for c in categories %}
                 <li {% if category.slug == c.slug %}class="selected"{% endif %}>
@@ -29,7 +29,7 @@
             {% if category %}
                 {{ category.name }}
             {% else %}
-                Products
+                {% translate "Products" %}
             {% endif %}
         </h1>
         {% for product in products %}

@@ -1,26 +1,29 @@
-{% load static %}
+{% load il8n static %}
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>{% block title %}ShopNow{% endblock %}</title>
+        <title>{% block title %}{% translate "ShopNow" %}{% endblock %}</title>
         <link href="{% static 'css/base.css' %}" rel="stylesheet">
     </head>
     <body>
         <div id="header">
-            <a href="/" class="logo">ShopNow</a>
+            <a href="/" class="logo">{% translate "ShopNow" %}</a>
         </div>
         <div id="subheader">
             <div class="cart">
                 {% with total_items=cart|length %}
                     {% if total_items > 0 %}
-                        Your cart:
+                        {% translate "Your Cart" %}
                         <a href="{% url 'cart:cart_detail' %}">
-                            {{ total_items }} item{{ total_items|pluralize }},
-                            ${{ cart.get_total_price }}
+                            {% blocktranslate with total=cart.get_total_price count items=total_items %}
+                                {{ items }} item, ${{ total }}
+                            {% plural %}
+                                {{ items }} items, ${{ total }}
+                            {% endblocktranslate %}
                         </a>
                     {% elif not order %}
-                    Your cart is empty.
+                    {% translate "Your cart is empty." %}
                     {% endif %}
                 {% endwith %}
             </div>
