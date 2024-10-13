@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-13 22:07+0300\n"
+"POT-Creation-Date: 2024-10-13 22:19+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,38 +23,44 @@ msgid "Quantity"
 msgstr ""
 
 #: .\cart\templates\cart\detail.html:5 .\cart\templates\cart\detail.html:9
+#: .\payment\templates\payment\process.html:6
+#: .\payment\templates\payment\process.html:10
 msgid "Your shopping cart"
 msgstr ""
 
 #: .\cart\templates\cart\detail.html:13
-#: .\payment\templates\payment\process.html:13
+#: .\payment\templates\payment\process.html:14
 msgid "Image"
 msgstr ""
 
 #: .\cart\templates\cart\detail.html:14
-#: .\payment\templates\payment\process.html:14
+#: .\payment\templates\payment\process.html:15
 msgid "Product"
 msgstr ""
 
 #: .\cart\templates\cart\detail.html:16 .\cart\templates\cart\detail.html:41
+#: .\payment\templates\payment\process.html:17
+#: .\payment\templates\payment\process.html:42
 msgid "Remove"
 msgstr ""
 
 #: .\cart\templates\cart\detail.html:17
+#: .\payment\templates\payment\process.html:18
 msgid "Unit price"
 msgstr ""
 
 #: .\cart\templates\cart\detail.html:18
-#: .\payment\templates\payment\process.html:15
+#: .\payment\templates\payment\process.html:19
 msgid "Price"
 msgstr ""
 
 #: .\cart\templates\cart\detail.html:35
+#: .\payment\templates\payment\process.html:36
 msgid "Update"
 msgstr ""
 
 #: .\cart\templates\cart\detail.html:52
-#: .\payment\templates\payment\process.html:34
+#: .\payment\templates\payment\process.html:53
 msgid "Subtotal"
 msgstr ""
 
@@ -64,29 +70,33 @@ msgid "%(code)s"
 msgstr ""
 
 #: .\cart\templates\cart\detail.html:68
-#: .\payment\templates\payment\process.html:17
-#: .\payment\templates\payment\process.html:53
+#: .\payment\templates\payment\process.html:70
 msgid "Total"
 msgstr ""
 
 #: .\cart\templates\cart\detail.html:77
+#: .\payment\templates\payment\process.html:79
 #: .\shop\templates\shop\product\details.html:31
 msgid "People who bought this also bought"
 msgstr ""
 
 #: .\cart\templates\cart\detail.html:89
+#: .\payment\templates\payment\process.html:91
 msgid "Apply a coupon"
 msgstr ""
 
 #: .\cart\templates\cart\detail.html:92
+#: .\payment\templates\payment\process.html:94
 msgid "Apply"
 msgstr ""
 
 #: .\cart\templates\cart\detail.html:97
+#: .\payment\templates\payment\process.html:99
 msgid "Continue shopping"
 msgstr ""
 
 #: .\cart\templates\cart\detail.html:98
+#: .\payment\templates\payment\process.html:100
 msgid "Checkout"
 msgstr ""
 
@@ -130,24 +140,12 @@ msgstr ""
 msgid "Your payment has been processed successfully"
 msgstr ""
 
-#: .\payment\templates\payment\process.html:5
-msgid "Pay your order"
-msgstr ""
-
-#: .\payment\templates\payment\process.html:9
-msgid "Order summary"
-msgstr ""
-
-#: .\payment\templates\payment\process.html:42
+#: .\payment\templates\payment\process.html:59
 #, python-format
 msgid ""
 "\n"
 "                            \"%(code)s\" (%(discount)s%% off)\n"
 "                        "
-msgstr ""
-
-#: .\payment\templates\payment\process.html:60
-msgid "Pay now"
 msgstr ""
 
 #: .\shop\templates\shop\base.html:6 .\shop\templates\shop\base.html:11
