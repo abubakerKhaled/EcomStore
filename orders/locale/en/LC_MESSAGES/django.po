@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-13 16:00+0300\n"
+"POT-Creation-Date: 2024-10-13 21:35+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
 #: .\orders\models\order_model.py:12
 msgid "first_name"
 msgstr ""
@@ -38,4 +39,74 @@ msgstr ""
 
 #: .\orders\models\order_model.py:17
 msgid "city"
+msgstr ""
+
+#: .\orders\templates\orders\order\create.html:5
+#: .\orders\templates\orders\order\create.html:9
+msgid "Checkout"
+msgstr ""
+
+#: .\orders\templates\orders\order\create.html:12
+msgid "Your order"
+msgstr ""
+
+#: .\orders\templates\orders\order\create.html:29
+#: .\orders\templates\orders\order\pdf.html:68
+msgid "Total"
+msgstr ""
+
+#: .\orders\templates\orders\order\create.html:34
+msgid "Place order"
+msgstr ""
+
+#: .\orders\templates\orders\order\pdf.html:6
+msgid "EcomStore | Invoice"
+msgstr ""
+
+#: .\orders\templates\orders\order\pdf.html:14
+msgid "Invoice no"
+msgstr ""
+
+#: .\orders\templates\orders\order\pdf.html:20
+msgid "Bill to"
+msgstr ""
+
+#: .\orders\templates\orders\order\pdf.html:29
+msgid "Items bought"
+msgstr ""
+
+#: .\orders\templates\orders\order\pdf.html:33
+msgid "Product"
+msgstr ""
+
+#: .\orders\templates\orders\order\pdf.html:34
+msgid "Price"
+msgstr ""
+
+#: .\orders\templates\orders\order\pdf.html:35
+msgid "Quantity"
+msgstr ""
+
+#: .\orders\templates\orders\order\pdf.html:36
+msgid "Cost"
+msgstr ""
+
+#: .\orders\templates\orders\order\pdf.html:50
+msgid "Subtotal"
+msgstr ""
+
+#: .\orders\templates\orders\order\pdf.html:57
+#, python-format
+msgid ""
+"\n"
+"                                \"%(code)s\" (%(discount)s%% off)\n"
+"                            "
+msgstr ""
+
+#: .\orders\templates\orders\order\pdf.html:77
+msgid "Paid"
+msgstr ""
+
+#: .\orders\templates\orders\order\pdf.html:79
+msgid "Pending payment"
 msgstr ""

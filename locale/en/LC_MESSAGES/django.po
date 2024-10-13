@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-13 16:00+0300\n"
+"POT-Creation-Date: 2024-10-13 21:33+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,85 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\cart\forms.py:10 .\cart\templates\cart\detail.html:15
+#: .\payment\templates\payment\process.html:16
+msgid "Quantity"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:5 .\cart\templates\cart\detail.html:9
+msgid "Your shopping cart"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:13
+#: .\payment\templates\payment\process.html:13
+#: .\venv\Lib\site-packages\django\db\models\fields\files.py:420
+msgid "Image"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:14
+#: .\payment\templates\payment\process.html:14
+msgid "Product"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:16 .\cart\templates\cart\detail.html:41
+msgid "Remove"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:17
+msgid "Unit price"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:18
+#: .\payment\templates\payment\process.html:15
+msgid "Price"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:35
+msgid "Update"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:52
+#: .\payment\templates\payment\process.html:34
+msgid "Subtotal"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:58
+#: .\payment\templates\payment\process.html:42
+#, python-format
+msgid "%(code)s"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:68
+#: .\payment\templates\payment\process.html:17
+#: .\payment\templates\payment\process.html:53
+msgid "Total"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:77
+#: .\shop\templates\shop\product\details.html:31
+msgid "People who bought this also bought"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:89
+msgid "Apply a coupon"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:92
+msgid "Apply"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:97
+msgid "Continue shopping"
+msgstr ""
+
+#: .\cart\templates\cart\detail.html:98
+msgid "Checkout"
+msgstr ""
+
+#: .\coupons\forms.py:5
+msgid "Coupon"
+msgstr ""
 
 #: .\ecomstore\settings.py:121
 msgid "Arabic"
@@ -27,6 +106,92 @@ msgstr ""
 
 #: .\ecomstore\settings.py:123
 msgid "Spanish"
+msgstr ""
+
+#: .\payment\templates\payment\canceled.html:5
+msgid "Payment canceled"
+msgstr ""
+
+#: .\payment\templates\payment\canceled.html:9
+msgid "Your payment has not been processed"
+msgstr ""
+
+#: .\payment\templates\payment\canceled.html:10
+msgid "There was a problem processing your payment"
+msgstr ""
+
+#: .\payment\templates\payment\completed.html:7
+msgid "Payment successful"
+msgstr ""
+
+#: .\payment\templates\payment\completed.html:13
+msgid "Your payment was successful"
+msgstr ""
+
+#: .\payment\templates\payment\completed.html:14
+msgid "Your payment has been processed successfully"
+msgstr ""
+
+#: .\payment\templates\payment\process.html:5
+msgid "Pay your order"
+msgstr ""
+
+#: .\payment\templates\payment\process.html:9
+msgid "Order summary"
+msgstr ""
+
+#: .\payment\templates\payment\process.html:43
+msgid "coupon"
+msgstr ""
+
+#: .\payment\templates\payment\process.html:44
+msgid "off"
+msgstr ""
+
+#: .\payment\templates\payment\process.html:60
+msgid "Pay now"
+msgstr ""
+
+#: .\shop\templates\shop\base.html:6 .\shop\templates\shop\base.html:11
+msgid "ShopNow"
+msgstr ""
+
+#: .\shop\templates\shop\base.html:17
+msgid "Your Cart"
+msgstr ""
+
+#: .\shop\templates\shop\base.html:19
+#, python-format
+msgid ""
+"\n"
+"                                %(items)s item, $%(total)s\n"
+"                            "
+msgid_plural ""
+"\n"
+"                                %(items)s items, $%(total)s\n"
+"                            "
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\shop\templates\shop\base.html:26
+msgid "Your cart is empty."
+msgstr ""
+
+#: .\shop\templates\shop\product\details.html:24
+msgid "Add to cart"
+msgstr ""
+
+#: .\shop\templates\shop\product\list.html:8
+#: .\shop\templates\shop\product\list.html:32
+msgid "Products"
+msgstr ""
+
+#: .\shop\templates\shop\product\list.html:14
+msgid "Categories"
+msgstr ""
+
+#: .\shop\templates\shop\product\list.html:17
+msgid "All"
 msgstr ""
 
 #: .\venv\Lib\site-packages\click\_termui_impl.py:518
@@ -710,10 +875,6 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\db\models\fields\files.py:244
 msgid "File"
-msgstr ""
-
-#: .\venv\Lib\site-packages\django\db\models\fields\files.py:420
-msgid "Image"
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\db\models\fields\json.py:24
