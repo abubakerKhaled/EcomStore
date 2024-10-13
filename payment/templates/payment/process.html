@@ -39,9 +39,9 @@
                 </tr>
                 <tr>
                     <td>
-                        "{% blocktranslate with code=order.coupon.code discount=order.discount %}{{ code }}{% endblocktranslate %}" 
-                        {% translate "coupon" %}
-                        ({{ order.discount }}% {% translate "off" %})
+                        {% blocktranslate with code=order.coupon.code discount=order.coupon.discount %}
+                            "{{ code }}" ({{ discount }}% off)
+                        {% endblocktranslate %}
                     </td>
                     <td colspan="3"></td>
                     <td class="num neg">
