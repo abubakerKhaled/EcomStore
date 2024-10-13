@@ -19,24 +19,24 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 #: .\orders\models\order_model.py:12
 msgid "first_name"
-msgstr ""
+msgstr "الاسم الأول"
 
 #: .\orders\models\order_model.py:13
 msgid "last_name"
-msgstr ""
+msgstr "اسم العائلة"
 
 #: .\orders\models\order_model.py:14
 msgid "e-mail"
-msgstr ""
+msgstr "البريد الإلكتروني"
 
 #: .\orders\models\order_model.py:15
 msgid "address"
-msgstr ""
+msgstr "العنوان"
 
 #: .\orders\models\order_model.py:16
 msgid "postal code"
-msgstr ""
+msgstr "الرمز البريدي"
 
 #: .\orders\models\order_model.py:17
 msgid "city"
-msgstr ""
+msgstr "المدينة"

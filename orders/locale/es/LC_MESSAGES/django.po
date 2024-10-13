@@ -19,24 +19,25 @@ msgstr ""
 "1 : 2;\n"
 #: .\orders\models\order_model.py:12
 msgid "first_name"
-msgstr ""
+msgstr "nombre"
 
 #: .\orders\models\order_model.py:13
 msgid "last_name"
-msgstr ""
+msgstr "apellido"
 
 #: .\orders\models\order_model.py:14
 msgid "e-mail"
-msgstr ""
+msgstr "correo electrónico"
 
 #: .\orders\models\order_model.py:15
 msgid "address"
-msgstr ""
+msgstr "dirección"
 
 #: .\orders\models\order_model.py:16
 msgid "postal code"
-msgstr ""
+msgstr "código postal"
 
 #: .\orders\models\order_model.py:17
 msgid "city"
-msgstr ""
+msgstr "ciudad"
+
