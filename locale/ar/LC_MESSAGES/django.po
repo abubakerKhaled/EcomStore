@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-13 22:19+0300\n"
+"POT-Creation-Date: 2024-10-17 12:23+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -117,6 +117,24 @@ msgstr "الإنجليزية"
 msgid "Spanish"
 msgstr "الإسبانية"
 
+#: .\ecomstore\urls.py:28
+msgid "cart/"
+msgstr "عربة التسوق/"
+
+#: .\ecomstore\urls.py:29
+msgid "orders/"
+msgstr "الطلبات/"
+
+#: .\ecomstore\urls.py:30
+msgid "payment/"
+msgstr "الدفع/"
+
+#: .\ecomstore\urls.py:31
+#, fuzzy
+#| msgid "coupon"
+msgid "coupons/"
+msgstr "كوبونات/"
+
 #: .\payment\templates\payment\canceled.html:5
 msgid "Payment canceled"
 msgstr "تم إلغاء الدفع"
@@ -148,6 +166,20 @@ msgid ""
 "                            \"%(code)s\" (%(discount)s%% off)\n"
 "                        "
 msgstr ""
+
+#: .\payment\urls.py:8
+msgid "process/"
+msgstr "معالجة/"
+
+#: .\payment\urls.py:9
+msgid "completed/"
+msgstr "اكتمل/"
+
+#: .\payment\urls.py:10
+#, fuzzy
+#| msgid "Payment canceled"
+msgid "canceled/"
+msgstr "تم إلغاء الدفع"
 
 #: .\shop\templates\shop\base.html:6 .\shop\templates\shop\base.html:11
 msgid "ShopNow"
@@ -203,9 +235,6 @@ msgstr "الكل"
 
 #~ msgid "Pay now"
 #~ msgstr "ادفع الآن"
-
-#~ msgid "coupon"
-#~ msgstr "كوبون"
 
 #~ msgid "off"
 #~ msgstr "خصم"
